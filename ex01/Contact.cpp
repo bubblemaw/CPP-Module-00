@@ -1,28 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masase <masase@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/25 14:37:07 by masase            #+#    #+#             */
-/*   Updated: 2025/05/26 15:00:05 by masase           ###   ########.fr       */
+/*   Created: 2025/05/26 11:30:13 by masase            #+#    #+#             */
+/*   Updated: 2025/05/26 12:57:10 by masase           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Contact.hpp"
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
-# include <iostream>
-# include <ostream>
-# include <cctype>
-# include "Contact.hpp"
-
-class PhoneBook
-{
-    private:
-    Contact contacts[8];
-
-};
-
-#endif
