@@ -3,63 +3,164 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masase <masase@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maw <maw@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 11:30:13 by masase            #+#    #+#             */
-/*   Updated: 2025/05/27 19:47:19 by masase           ###   ########.fr       */
+/*   Updated: 2025/05/30 23:02:35 by maw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-    void Contact::set_first()
-    {
-        std::cout << "please enter the first name\n";
-        std::getline(std::cin, first_name);
-        std::cout << "we just put the first name" << first_name << std::endl;
-    }
-    
-    void Contact::set_last()
-    {
-        std::cout << "please enter the last name\n";
-        std::getline(std::cin, last_name);
-        std::cout << "we just put the last_name" << last_name << std::endl;
-    }     
+void Contact::set_first()
+{
+	std::cout << "Enter first name:\n";
+	std::getline(std::cin, first_name);
+}
 
-    void Contact::set_phone()
-    {
-        std::cout << "please enter the phone number\n";
-        std::getline(std::cin, phone_number);
-        std::cout << "we just put the phone_number" << phone_number << std::endl;
-    }
+void Contact::set_last()
+{
+	std::cout << "Enter last name:\n";
+	std::getline(std::cin, last_name);
+}
 
-    void Contact::dark()
-    {
-        std::cout << "please enter the darkest secret\n";
-        std::getline(std::cin, dark_secret);
-        std::cout << "we just put the dark_secret" << dark_secret <<  std::endl;
-    }
-    
-    void Contact::display_first_name()
-    {
-        std::cout << first_name;
-    }
-    
-    void Contact::display_last_name()
-    {
-        std::cout << last_name.max_size();
-    }
-    void Contact::display_phone_number()
-    {
-        std::string print;
-        if (phone_number.size() > 10)
-        {
-            
-        }
-        std::cout << phone_number;
-    }
-    void Contact::display_dark_secret()
-    {
-        std::cout << dark_secret << std::endl;
-    }
-    
+void Contact::set_nick()
+{
+	std::cout << "Enter nickname:\n";
+	std::getline(std::cin, last_name);
+}     
+
+int Contact::set_phone()
+{
+	std::string input;
+	int i;
+	int valid = true;
+
+	while (true)
+	{
+		std::cout << "Enter phone number:\n";
+		std::getline(std::cin, input);
+		if(std::cin.eof() || std::cin.fail())
+			return (0);
+		i = 0;
+		while (input[i])
+		{
+			if (!std::isdigit(input[i]))
+			{
+				std::cout << "Please only enter number\n";
+				valid = false;
+				break ;
+			}
+			valid = true;
+			i++;
+		}
+		if (valid == true)
+		{
+			phone_number = input;
+			break ;
+		}
+	}
+	return (1);
+	}
+
+void Contact::set_dark()
+{
+	std::cout << "Please enter darkest secret:\n";
+	std::getline(std::cin, dark_secret);
+}
+
+void Contact::display_first_name()
+{
+	if (first_name.size() >= 10)
+	{
+		std::cout << first_name.substr(0, 9);
+		std::cout << ".";
+	}
+	else
+	{
+		std::cout << first_name;
+		for(int i = first_name.length() - 10; i < 0; i++)
+			std::cout << " ";
+	}
+}
+
+void Contact::display_last_name()
+{
+	if (last_name.size() >= 10)
+	{
+		std::cout << last_name.substr(0, 9);
+		std::cout << ".";
+	}
+	else
+	{
+		std::cout << last_name;
+		for(int i = last_name.length() - 10; i < 0; i++)
+			std::cout << " ";
+	}
+}
+
+void Contact::display_nickname()
+{
+	if (nickname.size() >= 10)
+	{
+		std::cout << nickname.substr(0, 9);
+		std::cout << ".";
+	}
+	else
+	{
+		std::cout << nickname;
+		for(int i = nickname.length() - 10; i < 0; i++)
+			std::cout << " ";
+	}
+}
+void Contact::display_phone_number()
+{
+	if (phone_number.size() >= 10)
+	{
+		std::cout << phone_number.substr(0, 9);
+		std::cout << ".";
+	}
+	else
+	{
+		std::cout << phone_number;
+		for(int i = phone_number.length() - 10; i < 0; i++)
+			std::cout << " ";
+	}
+}
+void Contact::display_dark_secret()
+{
+	if (dark_secret.size() >= 10)
+	{
+		std::cout << dark_secret.substr(0, 9);
+		std::cout << ".";
+	}
+	else
+	{
+		std::cout << dark_secret;
+		for(int i = dark_secret.length() - 10; i < 0; i++)
+			std::cout << " ";
+	}
+}
+
+void Contact::full_first_name()
+{
+	std::cout << "First name: " << first_name << std::endl;
+}
+
+void Contact::full_last_name()
+{
+	std::cout << "Last name: "  << last_name << std::endl;
+}
+
+void Contact::full_nickname()
+{
+	std::cout << "Nickname: "  << nickname << std::endl;
+}
+void Contact::full_phone_number()
+{
+	std::cout << "Phone number: "  << phone_number << std::endl;
+}
+void Contact::full_dark_secret()
+{
+	std::cout << "Darkest secret: " << dark_secret << std::endl;
+}
