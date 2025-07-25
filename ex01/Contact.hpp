@@ -6,7 +6,7 @@
 /*   By: maw <maw@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 14:37:31 by masase            #+#    #+#             */
-/*   Updated: 2025/05/30 15:24:40 by maw              ###   ########.fr       */
+/*   Updated: 2025/07/25 14:10:59 by maw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ class Contact
 		void full_nickname();
         void full_phone_number();
         void full_dark_secret();
-
 };
 
 #endif

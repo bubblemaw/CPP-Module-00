@@ -6,7 +6,7 @@
 /*   By: maw <maw@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 11:30:54 by masase            #+#    #+#             */
-/*   Updated: 2025/05/30 22:44:52 by maw              ###   ########.fr       */
+/*   Updated: 2025/07/25 14:10:35 by maw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,12 @@
             contacts[i].display_last_name();
 			std::cout << " | ";
             contacts[i].display_nickname();
-			std::cout << " | ";
-            contacts[i].display_phone_number();
-			std::cout << " | ";
-            contacts[i].display_dark_secret();
+            std::cout << " | ";
 			std::cout << std::endl;
             i++;
         }
         return (0);
     }
-
 	int	PhoneBook::display_choice(int i)
 	{
 		contacts[i].full_first_name();

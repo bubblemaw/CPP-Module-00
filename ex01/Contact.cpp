@@ -6,7 +6,7 @@
 /*   By: maw <maw@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 11:30:13 by masase            #+#    #+#             */
-/*   Updated: 2025/05/30 23:02:35 by maw              ###   ########.fr       */
+/*   Updated: 2025/07/25 13:56:50 by maw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void Contact::set_last()
 void Contact::set_nick()
 {
 	std::cout << "Enter nickname:\n";
-	std::getline(std::cin, last_name);
+	std::getline(std::cin, nickname);
 }     
 
 int Contact::set_phone()
@@ -78,9 +78,9 @@ void Contact::display_first_name()
 	}
 	else
 	{
-		std::cout << first_name;
 		for(int i = first_name.length() - 10; i < 0; i++)
 			std::cout << " ";
+		std::cout << first_name;
 	}
 }
 
@@ -93,9 +93,9 @@ void Contact::display_last_name()
 	}
 	else
 	{
-		std::cout << last_name;
 		for(int i = last_name.length() - 10; i < 0; i++)
-			std::cout << " ";
+			std::cout << " ";		
+		std::cout << last_name;
 	}
 }
 
@@ -108,9 +108,9 @@ void Contact::display_nickname()
 	}
 	else
 	{
-		std::cout << nickname;
 		for(int i = nickname.length() - 10; i < 0; i++)
-			std::cout << " ";
+			std::cout << " ";		
+		std::cout << nickname;
 	}
 }
 void Contact::display_phone_number()
@@ -122,9 +122,9 @@ void Contact::display_phone_number()
 	}
 	else
 	{
-		std::cout << phone_number;
 		for(int i = phone_number.length() - 10; i < 0; i++)
-			std::cout << " ";
+			std::cout << " ";		
+		std::cout << phone_number;
 	}
 }
 void Contact::display_dark_secret()
@@ -136,9 +136,9 @@ void Contact::display_dark_secret()
 	}
 	else
 	{
-		std::cout << dark_secret;
 		for(int i = dark_secret.length() - 10; i < 0; i++)
-			std::cout << " ";
+			std::cout << " ";		
+		std::cout << dark_secret;
 	}
 }
 
